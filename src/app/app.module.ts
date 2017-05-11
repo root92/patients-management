@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import {RouterModule, Routes} from '@angular/router';
 
 import {FlashMessagesModule} from 'angular2-flash-messages';
+import {TranslateModule} from 'ng2-translate';
 
 import {AuthService} from './services/auth-service.service';
 
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    FlashMessagesModule
+    FlashMessagesModule,
+    TranslateModule.forRoot()
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
