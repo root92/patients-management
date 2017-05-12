@@ -20,10 +20,14 @@ import {AuthServiceService} from './services/auth-service.service';
 import { AppComponent } from './app.component';
 import { ClientInfoComponent } from './components/client-info/client-info.component';
 import { HomeComponent } from './components/home/home.component';
+import { PatientsComponent } from './components/patients/patients.component';
+import { SidenavComponent } from './components/partials/sidenav/sidenav.component';
+import { ToolbarComponent } from './components/partials/toolbar/toolbar.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'client', component: ClientInfoComponent}
+  {path: 'client', component: ClientInfoComponent},
+  {path: 'patients', component: PatientsComponent},
 ]
 
 @NgModule({
@@ -31,6 +35,9 @@ const appRoutes: Routes = [
     AppComponent,
     ClientInfoComponent,
     HomeComponent,
+    PatientsComponent,
+    SidenavComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,

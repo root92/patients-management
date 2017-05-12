@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MdSidenavModule } from '@angular2-material/sidenav';
+import { SidenavComponent } from '../partials/sidenav/sidenav.component';
 
 @Component({
   selector: 'app-client-info',
