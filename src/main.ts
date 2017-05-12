@@ -8,3 +8,5 @@ if (environment.production) {
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule);
+//  <reference path="../typings/globals/hammerjs/index.d.ts" />
+//  <reference path="../typings/globals/hammerjs/index.d.ts" />

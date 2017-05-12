@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {FlashMessagesService} from 'angular2-flash-messages';
 
-import {AuthService} from '../../services/auth-service.service'
+import { AuthServiceService } from '../../services/auth-service.service'
 
 @Component({
   selector: 'app-home',
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   constructor(
     private FlashMessages: FlashMessagesService,
     private router: Router,
-    private AuthService: AuthService
+    private AuthService: AuthServiceService
   ) { }
 
   ngOnInit() {
