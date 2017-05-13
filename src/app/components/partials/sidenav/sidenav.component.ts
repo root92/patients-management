@@ -8,9 +8,12 @@ import { ToolbarComponent } from '../toolbar/toolbar.component';
 })
 export class SidenavComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
+

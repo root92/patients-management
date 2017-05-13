@@ -4,16 +4,12 @@ import {FlashMessagesService} from 'angular2-flash-messages';
 
 import { AuthServiceService } from '../../services/auth-service.service'
 
-import { MdToolbarModule } from '@angular2-material/toolbar';
-import { SidenavComponent } from '../partials/sidenav/sidenav.component';
-
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-
-export class HomeComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
   username: string;
   password: string;
@@ -43,7 +39,7 @@ export class HomeComponent implements OnInit {
       /* this.AuthService.loginUser(user).subscribe(data => {
         // TODO
       }) */
-      this.router.navigate(['/client']);
+      this.router.navigate(['/home']);
       return true;
     }
 

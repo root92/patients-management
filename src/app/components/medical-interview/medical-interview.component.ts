@@ -4,12 +4,12 @@ import { MdSidenavModule } from '@angular2-material/sidenav';
 import { SidenavComponent } from '../partials/sidenav/sidenav.component';
 
 @Component({
-  selector: 'app-patients',
-  templateUrl: './patients.component.html',
-  styleUrls: ['./patients.component.css']
+  selector: 'app-medical-interview',
+  templateUrl: './medical-interview.component.html',
+  styleUrls: ['./medical-interview.component.css']
 })
-export class PatientsComponent implements OnInit {
-Title = "Add new patient";
+export class MedicalInterviewComponent implements OnInit {
+
   constructor() { }
 
   ngOnInit() {

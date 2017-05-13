@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+
+import {FlashMessagesModule} from 'angular2-flash-messages';
+
 import { MdSidenavModule } from '@angular2-material/sidenav';
 import { SidenavComponent } from '../partials/sidenav/sidenav.component';
+import { LoginComponent } from '../login/login.component';
+
 
 @Component({
   selector: 'app-client-info',
@@ -9,8 +14,7 @@ import { SidenavComponent } from '../partials/sidenav/sidenav.component';
 })
 export class ClientInfoComponent implements OnInit {
   sexe: ['Masculin', 'Feminin'];
-  // private insured = new Insured();
-
+  Title = 'Client';
   constructor() { 
     
   }

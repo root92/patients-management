@@ -1,6 +1,4 @@
-<md-sidenav-layout>
-  <md-sidenav-layout>
-    <md-sidenav md-raised mode="side" opened="true">
+ <md-sidenav md-raised mode="side" opened="true">
       <md-nav-list>
         <md-list-item>
           <img md-list-avatar src="..." alt="...">
@@ -8,26 +6,23 @@
         </md-list-item>
         <md-divider></md-divider>
         <md-divider></md-divider>
+        <button md-list-item md-button routerLink="../home">Home</button>
         <md-divider></md-divider>
-        <button md-list-item md-button [routerLink]="patients">Patients</button>
+        <button md-list-item md-button routerLink="../patients">Patients</button>
         <md-divider></md-divider>
-        <button md-list-item md-button>Imaging</button>
+        <button md-list-item md-button routerLink="../medicalInterview">Medical interview</button>
         <md-divider></md-divider>
-        <button md-list-item md-button>Medication</button>
+        <button md-list-item md-button routerLink="../physicalExamination">Physical Examination</button>
+        <md-divider></md-divider>        
+        <button md-list-item md-button routerLink="../imaging">Imaging</button>
         <md-divider></md-divider>
-        <button md-list-item md-button>Labs</button>
+        <button md-list-item md-button routerLink="../medication">Medication</button>
         <md-divider></md-divider>
-        <button md-list-item md-button>Incident</button>
+        <button md-list-item md-button routerLink="../labs">Labs</button>
         <md-divider></md-divider>
-        <button md-list-item md-button>Administration</button>
+        <md-divider></md-divider>
+        <button md-list-item md-button routerLink="../billings">Billing</button>
         <md-divider></md-divider>
       </md-nav-list>
       
     </md-sidenav>
-
-  <div class="sidenav-content">
-    <app-toolbar></app-toolbar>
-
-  </div>
-
-</md-sidenav-layout>
