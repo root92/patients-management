@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {FlashMessagesService} from 'angular2-flash-messages';
 
-import { AuthServiceService } from '../../services/auth-service.service'
+import {AuthServiceService} from '../../services/auth-service.service'
 
 import { MdToolbarModule } from '@angular2-material/toolbar';
 import { SidenavComponent } from '../partials/sidenav/sidenav.component';
