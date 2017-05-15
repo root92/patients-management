@@ -15,7 +15,6 @@ import { MdListModule } from '@angular2-material/list';
 import 'hammerjs';
 
 import {FlashMessagesModule} from 'angular2-flash-messages';
-import {TranslateModule} from 'ng2-translate';
 
 import {AuthServiceService} from './services/auth-service.service';
 
