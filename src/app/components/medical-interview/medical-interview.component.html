@@ -1,11 +1,133 @@
 <md-sidenav-layout>
   <app-sidenav></app-sidenav>
   <div class="sidenav-content">
-     <md-toolbar>medical-interview works!</md-toolbar>
-    <!--content-->
-         
-    </div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <h3>Medical interview</h3>
+        </div>
+        <button type="button" class="btn btn-default navbar-btn navbar-right">New Interview</button>
+      </div>
+    </nav>
 
+     <div class="main-content">
+       <div class="panel panel-default">
+          <div class="panel-heading">Identification</div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-3">
+                Anssurance Name
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="col-md-3">
+                Issured ID
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-xs-12 col-md-8">
+                <form class="form-horizontal">
+                  <div class="form-group" style="padding-top: 10px;">
+                    <label for="" class="col-sm-2 control-label">Nom</label>
+                    <div class="col-sm-3">
+                      <input type="" class="form-control" id="" placeholder="Nom">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Prenom</label>
+                    <div class="col-sm-4">
+                      <input type="" class="form-control" id="" placeholder="Prenom">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Age</label>
+                    <div class="col-sm-2">
+                      <input type="" class="form-control" id="" placeholder="Age">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Addrese</label>
+                    <div class="col-sm-4">
+                      <input type="" class="form-control" id="" placeholder="Addrese">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-xs-6 col-md-4">
+                <div>
+                  <img src=",,/../../assets/avatar/avatar.jpg" alt="Image du patient" class="img-thumbnail">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="input-group col-md-8">
+            <span class="input-group-addon" id="basic-addon1">Motif de consulatation</span>
+            <input type="text" class="form-control" placeholder="Motif de consultation" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="panel-body">
+
+        <div class="form-group col-md-5">
+          <label for="">Antecedents Familliaux</label>
+          <textarea class="form-control" rows="3" placeholder="What's up?" required></textarea>
+        </div>
+
+        <div class="form-group col-md-5">
+          <label for="">Antecedents Personnels</label>
+          <textarea class="form-control" rows="3" placeholder="What's up?" required></textarea>
+        </div>
+
+        <div class="form-group col-md-10">
+          <label for="">Interview</label>
+          <textarea class="form-control" rows="7" placeholder="Interview" required></textarea>
+        </div>
+
+        </div>
+        <div class="panel-footer">
+          <button type="button" class="btn btn-warning col-md-offset-9">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          Annuler et Quitter
+        </button>
+        <button type="button" class="btn btn-success">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          Enregistrer
+        </button>
+        </div>
+      </div>
+
+      
+        
+
+      <!--<div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Interview</h3>
+        </div>
+        <div class="panel-body">
+            <div class="input-group col-md-8">
+              <span class="input-group-addon" id="basic-addon1">Motif de consulatation</span>
+              <input type="text" class="form-control" placeholder="Motif de consultation" aria-describedby="basic-addon1">
+            </div>
+
+          <div class="row">
+            
+            <div class="form-group">
+              Antecedents Familliaux
+              <textarea class="form-control" rows="3" placeholder="What's up?" required></textarea>
+            </div>
+
+            <div class="col-md-6">
+              Antecedents personnels
+              <textarea class="form-control" rows="3" placeholder="What's up?" required></textarea>
+            </div>       -->
+    </div>
+</div>
 </md-sidenav-layout>
     
 
