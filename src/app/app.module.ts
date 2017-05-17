@@ -11,6 +11,7 @@ import { MdIconModule } from '@angular2-material/icon';
 import { MdSidenavModule } from '@angular2-material/sidenav';
 import { MdToolbarModule } from '@angular2-material/toolbar';
 import { MdListModule } from '@angular2-material/list';
+import {TranslateModule} from 'ng2-translate';
 
 import 'hammerjs';
 
@@ -71,7 +72,8 @@ const appRoutes: Routes = [
     MdButtonModule,
     MdToolbarModule,
     MdSidenavModule,
-    MdListModule
+    MdListModule,
+    TranslateModule.forRoot()
   ],
 
   providers: [AuthServiceService],
