@@ -1,8 +1,256 @@
+<app-sidenav></app-sidenav>
 <md-sidenav-layout>
-  <app-sidenav></app-sidenav>
   <div class="sidenav-content">
     <md-toolbar>physical-examination Works</md-toolbar>
-      <!--content-->
+    <div class="container">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">Inssurance Name</span>
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">Insured ID</span>
+                <input type="text" class="form-control" placeholder="Insured ID" aria-describedby="sizing-addon3">
+              </div>
+            </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">Name</span>
+                <input type="text" class="form-control" placeholder="Name" aria-describedby="sizing-addon3">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">Adresse</span>
+                <input type="text" class="form-control" placeholder="Adresse" aria-describedby="sizing-addon3">
+              </div>
+            </div>
+            <div class="col-md-6" style="padding-top: 10px;">
+              <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">Date of Birth</span>
+                <input type="text" class="form-control" placeholder="Date of Birth" aria-describedby="sizing-addon3">
+              </div>
+            </div>
+
+            <div class="col-md-6" style="padding-top: 10px;">
+              <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">Date of Exam</span>
+                <input type="text" class="form-control" placeholder="Date of Exam" aria-describedby="sizing-addon3">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="input-group input-group-sm" style="padding-top: 10px;">
+                <span class="input-group-addon" id="sizing-addon3">Sexe</span>
+                  <select class="form-control form-control-sm">
+                    <option></option>
+                    <option>Max</option>
+                    <option>Fem</option>
+                  </select>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="input-group input-group-sm" style="padding-top: 10px;">
+                <span class="input-group-addon" id="sizing-addon3">Name of Accompanying Staff</span>
+                <input type="text" class="form-control" placeholder="Name of Accompanying Staff" aria-describedby="sizing-addon3">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading"><b>DIAGNOSES/SIGNIFICANT HEALTH CONDITIONS</b></div>
+        <div class="panel-body">
+          <div class="container" style="padding-bottom: 10px;">
+             <textarea class="form-control" rows="3" placeholder="DIAGNOSES/SIGNIFICANT HEALTH CONDITIONS"></textarea>
+          </div>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <td>Medication Name</td>
+                <td>Dose</td>
+                <td>Frequency</td>
+                <td>Diagnosis</td>
+                <td>Prescribing Physician Specialty</td>
+                <td>Date Medication Prescribed</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text" class="form-control" placeholder="Medication Name" aria-describedby="sizing-addon3"></td>
+                <td><input type="text" class="form-control" placeholder="Dose" aria-describedby="sizing-addon3"></td>
+                <td><input type="text" class="form-control" placeholder="Frequency" aria-describedby="sizing-addon3"></td>
+                <td><input type="text" class="form-control" placeholder="Diagnosis" aria-describedby="sizing-addon3"></td>
+                <td><input type="text" class="form-control" placeholder="Prescribing Physician Specialty" aria-describedby="sizing-addon3"></td>
+                <td><input type="text" class="form-control" placeholder="Date Medication Prescribed" aria-describedby="sizing-addon3"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon" id="sizing-addon3">Allergies/Sensibilities</span>
+            <input type="text" class="form-control" placeholder="Allergies/Sensibilities" aria-describedby="sizing-addon3">
+          </div>
+          <div class="input-group input-group-sm" style="padding-top: 10px;">
+            <span class="input-group-addon" id="sizing-addon3">Contraindicated Medication</span>
+            <input type="text" class="form-control" placeholder="Contraindicated Medication" aria-describedby="sizing-addon3">
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading"><b>EVALUATION OF SYSTEMS</b></div>
+        <div class="panel-body">
+          <table class="table table table-bordered table-hover">
+            <thead>
+              <tr>
+                <td class="col-md-3">System Name</td>
+                <td class="col-md-2">Normal findings?</td>
+                <td>Comments/Description</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Eyes</td>
+                <td>
+                  <label class="radio-inline">
+                    <input type="radio" name="irEyes" id="inlineRadio1" value="option1"> Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="irEyes" id="inlineRadio2" value="option2"> No
+                  </label>
+                  <!--<label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                  </label>-->
+                </td>
+                <td>
+                  <textarea class="form-control" rows="1"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td>Ears</td>
+                <td>
+                  <label class="radio-inline">
+                    <input type="radio" name="irEars" id="inlineRadio1" value="option1"> Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="irEars" id="inlineRadio2" value="option2"> No
+                  </label>
+                </td>
+                <td>
+                  <textarea class="form-control" rows="1"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td>Nose</td>
+                <td>
+                  <label class="radio-inline">
+                    <input type="radio" name="irNose" id="inlineRadio1" value="option1"> Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="irNose" id="inlineRadio2" value="option2"> No
+                  </label>
+                </td>
+                <td>
+                  <textarea class="form-control" rows="1"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td>Mouth/Throat</td>
+                <td>
+                  <label class="radio-inline">
+                    <input type="radio" name="irMouth" id="inlineRadio1" value="option1"> Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="irMouth" id="inlineRadio2" value="option2"> No
+                  </label>
+                </td>
+                <td>
+                  <textarea class="form-control" rows="1"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td>Head/Face/Neck</td>
+                <td>
+                  <label class="radio-inline">
+                    <input type="radio" name="irHead" id="inlineRadio1" value="option1"> Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="irHead" id="inlineRadio2" value="option2"> No
+                  </label>
+                </td>
+                <td>
+                  <textarea class="form-control" rows="1"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td>Breasts</td>
+                <td>
+                  <label class="radio-inline">
+                    <input type="radio" name="irBreasts" id="inlineRadio1" value="option1"> Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="irBreasts" id="inlineRadio2" value="option2"> No
+                  </label>
+                </td>
+                <td>
+                  <textarea class="form-control" rows="1"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td>VISION SCREENING</td>
+                <td>
+                  <label class="radio-inline">
+                    <input type="radio" name="irVScreening" id="inlineRadio1" value="option1"> Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="irVScreening" id="inlineRadio2" value="option2"> No
+                  </label>
+                </td>
+                <td>
+                  <textarea class="form-control" rows="1"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td>HEARING SCREENING</td>
+                <td>
+                  <label class="radio-inline">
+                    <input type="radio" name="irHScreening" id="inlineRadio1" value="option1"> Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="irHScreening" id="inlineRadio2" value="option2"> No
+                  </label>
+                </td>
+                <td>
+                  <textarea class="form-control" rows="1"></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <button type="button" class="btn btn-danger col-md-offset-8">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          Cancel and Quit
+        </button>
+        <button type="button" class="btn btn-success">
+          <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>
+          Save
+        </button>
+    </div>
     </div>
 
 </md-sidenav-layout>
