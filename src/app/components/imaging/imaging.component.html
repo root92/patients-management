@@ -2,8 +2,39 @@
   <app-sidenav></app-sidenav>
   <div class="sidenav-content">
     <md-toolbar>imaging works!</md-toolbar>
-    <!--content-->
-      
+    <div class="panel panel-default">
+      <div class="panel-body">
+        
+        <div class="input-group input-group-sm">
+          <span class="input-group-addon" id="sizing-addon3">Patient</span>
+          <input type="text" class="form-control" placeholder="Patient" aria-describedby="sizing-addon3">
+        </div>
+
+          <div class="input-group input-group-sm" style="padding-top: 10px;">
+            <span class="input-group-addon" id="sizing-addon3">Visit</span>
+              <select class="form-control form-control-sm">
+                <option>--Add new visit--</option>
+              </select>
+          </div>
+
+        <div class="input-group input-group-sm" style="padding-top: 10px;">
+          <span class="input-group-addon" id="sizing-addon3">Imaging Type</span>
+          <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
+        </div>
+
+        <div class="" style="padding-top: 10px;">
+          <!--<span class="input-group-addon" id="sizing-addon3">Notes</span>-->
+          <textarea class="form-control" rows="3" placeholder="Notes"></textarea>
+        </div>
+
+        <div style="padding-top: 10px;">
+          <button class="btn btn-danger col-md-offset-10">Cancel</button>
+          <button class="btn btn-default">Add</button>
+        </div>
+        
+      </div>
+    </div>
+
     </div>
 
 </md-sidenav-layout>
