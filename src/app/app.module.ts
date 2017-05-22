@@ -11,6 +11,7 @@ import { MdIconModule } from '@angular2-material/icon';
 import { MdSidenavModule } from '@angular2-material/sidenav';
 import { MdToolbarModule } from '@angular2-material/toolbar';
 import { MdListModule } from '@angular2-material/list';
+import { MdIconRegistry } from '@angular2-material/icon'
 
 import 'hammerjs';
 
@@ -31,6 +32,7 @@ import { ImagingComponent } from './components/imaging/imaging.component';
 import { MedicationComponent } from './components/medication/medication.component';
 import { LabsComponent } from './components/labs/labs.component';
 import { BillingComponent } from './components/billing/billing.component';
+import { TraitementPlanComponent } from './components/traitement-plan/traitement-plan.component';
 
 
 const appRoutes: Routes = [
@@ -43,6 +45,7 @@ const appRoutes: Routes = [
   {path: 'medication', component: MedicationComponent},
   {path: 'labs', component: LabsComponent},
   {path: 'billings', component: BillingComponent},
+  {path: 'traitementPlan', component: TraitementPlanComponent}
 ]
 
 @NgModule({
@@ -60,6 +63,7 @@ const appRoutes: Routes = [
     MedicationComponent,
     LabsComponent,
     BillingComponent,
+    TraitementPlanComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,10 +75,11 @@ const appRoutes: Routes = [
     MdButtonModule,
     MdToolbarModule,
     MdSidenavModule,
-    MdListModule
+    MdListModule,
+    MdIconModule
   ],
 
-  providers: [AuthServiceService],
+  providers: [MdIconRegistry, AuthServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

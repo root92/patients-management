@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MdSidenavModule } from '@angular2-material/sidenav';
+import { MdIconModule } from '@angular2-material/icon';
 import { SidenavComponent } from '../partials/sidenav/sidenav.component';
 
 @Component({

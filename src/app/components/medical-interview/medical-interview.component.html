@@ -1,17 +1,13 @@
-  <app-sidenav></app-sidenav>
+<app-sidenav></app-sidenav>
   <md-sidenav-layout>
 
   <div class="sidenav-content">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <h3>Medical interview</h3>
-        </div>
-        <button type="button" class="btn btn-default navbar-btn navbar-right">New Interview</button>
-      </div>
-    </nav>
+    <md-toolbar color="primary">
+      <span>Medical i works!</span>
+      <span class="spacer"></span>
+      <button md-button><md-icon>add</md-icon>New Interview</button></md-toolbar>
 
-     <div class="main-content">
+     <div class="content">
        <div class="panel panel-default">
           <div class="panel-heading">Identification</div>
           <div class="panel-body">
@@ -92,41 +88,16 @@
 
         </div>
         <div class="panel-footer">
-          <button type="button" class="btn btn-warning col-md-offset-9">
-          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-          Annuler et Quitter
-        </button>
-        <button type="button" class="btn btn-success">
-          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-          Enregistrer
-        </button>
+          <button md-raised-button color="warn">
+            <md-icon>cancel</md-icon>
+            Cancel and Quit
+          </button>
+          <button md-raised-button color="primary">
+            <md-icon class="md-24">save</md-icon>
+            Save
+          </button>
         </div>
       </div>
-
-      
-        
-
-      <!--<div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Interview</h3>
-        </div>
-        <div class="panel-body">
-            <div class="input-group col-md-8">
-              <span class="input-group-addon" id="basic-addon1">Motif de consulatation</span>
-              <input type="text" class="form-control" placeholder="Motif de consultation" aria-describedby="basic-addon1">
-            </div>
-
-          <div class="row">
-            
-            <div class="form-group">
-              Antecedents Familliaux
-              <textarea class="form-control" rows="3" placeholder="What's up?" required></textarea>
-            </div>
-
-            <div class="col-md-6">
-              Antecedents personnels
-              <textarea class="form-control" rows="3" placeholder="What's up?" required></textarea>
-            </div>       -->
     </div>
 </div>
 </md-sidenav-layout>
