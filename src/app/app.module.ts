@@ -43,6 +43,7 @@ const appRoutes: Routes = [
   {path: 'medication', component: MedicationComponent},
   {path: 'labs', component: LabsComponent},
   {path: 'billings', component: BillingComponent},
+  
 ]
 
 @NgModule({
