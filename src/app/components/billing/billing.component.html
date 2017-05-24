@@ -1,9 +1,109 @@
-<md-sidenav-layout>
-  <app-sidenav></app-sidenav>
+ <app-sidenav></app-sidenav>
+  <md-sidenav-layout>
+
   <div class="sidenav-content">
-    <md-toolbar>billing works!</md-toolbar>
-    <!--content-->
+    <md-toolbar>Billing works!</md-toolbar>
+    <div class="container" style="padding-top: 10px;">
+      <div class="panel panel-default">
+      <div class="panel-body"> 
+        
+        <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">Inssurance Name</span>
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">Insured ID</span>
+                <input type="text" class="form-control" placeholder="Insured ID" aria-describedby="sizing-addon3">
+              </div>
+            </div>
+        </div>
+      </div>
+      </div>
+
+        <div class="input-group input-group-sm">
+          <span class="input-group-addon" id="sizing-addon3">Patient</span>
+          <input type="text" class="form-control" placeholder="Patient" aria-describedby="sizing-addon3">
+        </div>
+
+        <div class="input-group input-group-sm" style="padding-top: 10px;">
+          <span class="input-group-addon" id="sizing-addon3">Visit</span>
+            <select class="form-control form-control-sm">
+              <option>--Please select a visit--</option>
+            </select>
+        </div>
+
+        <div class="input-group input-group-sm" style="padding-top: 10px;">
+          <span class="input-group-addon" id="sizing-addon3">Bill Date</span>
+          <input type="text" class="form-control" placeholder="Bill Date" aria-describedby="sizing-addon3">
+        </div>
+
+        <div class="input-group input-group-sm" style="padding-top: 10px;">
+          <span class="input-group-addon" id="sizing-addon3">External invoice</span>
+          <input type="text" class="form-control" placeholder="External invoice" aria-describedby="sizing-addon3">
+        </div>
+
+        <div class="input-group input-group-sm" style="padding-top: 10px;">
+            <span class="input-group-addon" id="sizing-addon3">Paiement Profil</span>
+              <select class="form-control form-control-sm">
+                <option></option>
+              </select>
+          </div>
+        
+        <div style="padding-top: 10px;">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <td>Description</td>
+                <td>Actual charge</td>
+                <td>Discount</td>
+                <td>National Insurance</td>
+                <td>HMO/COM</td>
+                <td>Excess</td>
+                <td>Action</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TOTAL</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Payment/Deposits</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Grand Total</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
     </div>
+  </div>
+
+</div>
 
 </md-sidenav-layout>
-
