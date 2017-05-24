@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
 
 .container{
     width: 100%;
@@ -13,8 +14,8 @@ html, body, material-app, md-sidenav-layout, .sidenav-content {
 }
 
 
+.spacer {
+  flex: 1 1 auto;
+}
 
-/*.main-content {
-  margin: 10px;
-}*/
 
