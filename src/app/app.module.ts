@@ -20,14 +20,14 @@ import {FlashMessagesModule} from 'angular2-flash-messages';
 import {AuthServiceService} from './services/auth-service.service';
 
 import { AppComponent } from './app.component';
-// import { ClientInfoComponent } from './components/client-info/client-info.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { HomeComponent } from './components/home/home.component';
 import { PatientsComponent } from './components/patients/patients.component';
 import { SidenavComponent } from './components/partials/sidenav/sidenav.component';
 import { ToolbarComponent } from './components/partials/toolbar/toolbar.component';
 import { LoginComponent } from './components/login/login.component';
-import { MedicalInterviewComponent } from './components/medical-interview/medical-interview.component';
-import { PhysicalExaminationComponent } from './components/physical-examination/physical-examination.component';
+import { MedicalInterviewComponent } from './components/consultation/medical-interview/medical-interview.component';
+import { PhysicalExaminationComponent } from './components/consultation/physical-examination/physical-examination.component';
 import { ImagingComponent } from './components/imaging/imaging.component';
 import { MedicationComponent } from './components/medication/medication.component';
 import { LabsComponent } from './components/labs/labs.component';
@@ -35,6 +35,7 @@ import { BillingComponent } from './components/billing/billing.component';
 import { TraitementPlanComponent } from './components/traitement-plan/traitement-plan.component';
 import { ListPatientsComponent } from './components/patients/list-patients/list-patients.component';
 import { NewPatientComponent } from './components/patients/new-patient/new-patient.component';
+import { ConsultationComponent } from './components/consultation/consultation.component';
 
 
 const appRoutes: Routes = [
@@ -42,14 +43,38 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'patients', component: PatientsComponent,
     children: [
-      {path: '', redirectTo: 'listPatients', pathMatch: 'full' },
-      {path: 'newPatient', component: NewPatientComponent},
-      {path: 'listPatients', component: ListPatientsComponent}
+      {path: '', redirectTo: 'patients', pathMatch: 'full' },
+      {path: 'newPatient', component: NewPatientComponent,
+        data: {
+          breadcrumb: "Patient/ New Consultation"
+        }
+      },
+
+      {path: 'listPatients', component: ListPatientsComponent,
+        data: {
+          breadcrumb: "Patient / list Patients"
+        }
+      }
     ]
   },
-  {path: 'medicalInterview', component: MedicalInterviewComponent},
-  {path: 'physicalExamination', component: PhysicalExaminationComponent},
-  {path: 'imaging', component: ImagingComponent},
+
+  {path: 'consulation', component: ConsultationComponent,
+    children: [
+      {path: '', redirectTo: 'consulation', pathMatch: 'full' },
+      {path: 'medicalInterview', component: MedicalInterviewComponent,
+        data: {
+          breadcrumb: "Consultation / Medical Interview"
+        }
+      },
+      {path: 'physicalExamination', component: PhysicalExaminationComponent,
+        data: {
+            breadcrumb: "Consultation / Physical Examination"
+        }
+      },
+    ]
+  },
+
+  {path: 'imaging', component: ImagingComponent,},
   {path: 'medication', component: MedicationComponent},
   {path: 'labs', component: LabsComponent},
   {path: 'billings', component: BillingComponent},
@@ -69,11 +94,13 @@ const appRoutes: Routes = [
     PhysicalExaminationComponent,
     ImagingComponent,
     MedicationComponent,
+    BreadcrumbComponent,
     LabsComponent,
     BillingComponent,
     TraitementPlanComponent,
     ListPatientsComponent,
-    NewPatientComponent
+    NewPatientComponent,
+    ConsultationComponent
   ],
   imports: [
     BrowserModule,

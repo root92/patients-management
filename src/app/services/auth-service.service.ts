@@ -13,5 +13,4 @@ export class AuthServiceService {
     return this.http.post('http://apiurl.com', user, {headers: headers})
     .map(res => res.json());
   }
-
 }
