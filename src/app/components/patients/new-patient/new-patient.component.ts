@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-patient.component.css']
 })
 export class NewPatientComponent implements OnInit {
-
+  show: boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }
