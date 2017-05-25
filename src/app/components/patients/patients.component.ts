@@ -9,10 +9,11 @@ import { SidenavComponent } from '../partials/sidenav/sidenav.component';
   styleUrls: ['./patients.component.css']
 })
 export class PatientsComponent implements OnInit {
-Title = "Add new patient";
+
   constructor() { }
 
   ngOnInit() {
   }
 
 }
+
