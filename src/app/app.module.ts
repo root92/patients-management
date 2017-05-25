@@ -33,12 +33,20 @@ import { MedicationComponent } from './components/medication/medication.componen
 import { LabsComponent } from './components/labs/labs.component';
 import { BillingComponent } from './components/billing/billing.component';
 import { TraitementPlanComponent } from './components/traitement-plan/traitement-plan.component';
+import { ListPatientsComponent } from './components/patients/list-patients/list-patients.component';
+import { NewPatientComponent } from './components/patients/new-patient/new-patient.component';
 
 
 const appRoutes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'patients', component: PatientsComponent},
+  {path: 'patients', component: PatientsComponent,
+    children: [
+      {path: '', redirectTo: 'listPatients', pathMatch: 'full' },
+      {path: 'newPatient', component: NewPatientComponent},
+      {path: 'listPatients', component: ListPatientsComponent}
+    ]
+  },
   {path: 'medicalInterview', component: MedicalInterviewComponent},
   {path: 'physicalExamination', component: PhysicalExaminationComponent},
   {path: 'imaging', component: ImagingComponent},
@@ -64,6 +72,8 @@ const appRoutes: Routes = [
     LabsComponent,
     BillingComponent,
     TraitementPlanComponent,
+    ListPatientsComponent,
+    NewPatientComponent
   ],
   imports: [
     BrowserModule,
