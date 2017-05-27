@@ -27,6 +27,12 @@ button, h2{
   text-align: left;
 }
 
+.Aligner-item {
+  position: absolute;
+  padding: 20px;
+  bottom:   0;
+}
+
 
 
 

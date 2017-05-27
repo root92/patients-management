@@ -13,4 +13,11 @@ export class AuthServiceService {
     return this.http.post('http://localhost:8000/api/v1/auth/login/', user, {headers: headers})
     .map(res => res.json());
   }
+
+  // logoutUser(){
+  //   let headers = new Headers();
+  //   headers.append('Content-Type', 'application/json');
+  //   return this.http.get('http://localhost:8000/api/v1/auth/logout/', {headers: headers})
+  //   .map(res => res.json());
+  // }
 }
