@@ -11,7 +11,7 @@ import { AuthServiceService } from '../../services/auth-service.service'
 })
 export class LoginComponent implements OnInit {
 
-  username: string;
+  email: string;
   password: string;
 
   constructor(
@@ -25,21 +25,21 @@ export class LoginComponent implements OnInit {
 
   onLoginSubmit() {
     const user = {
-      username: this.username,
+      email: this.email,
       password: this.password
     }
 
-    if (user.username == undefined || user.password == undefined) {
+    if (user.email == undefined || user.password == undefined) {
       this.FlashMessages.show('Please fill all fields', {cssClass: 'alert-danger', timeout: 3000});
       return false;
-    } else {
-      this.FlashMessages.show('You are now logged in', {cssClass: 'alert-success', timeout: 3000});
-      console.log(user.username + ' ' + user.password);
+    } else {;
       /* Login User */
-      /* this.AuthService.loginUser(user).subscribe(data => {
-        // TODO
-      }) */
-      this.router.navigate(['/home']);
+      this.AuthService.loginUser(user).subscribe(data => {
+        if (data.first_name && data.last_name) {
+          this.FlashMessages.show('You are now logged in', {cssClass: 'alert-success', timeout: 3000})
+          this.router.navigate(['/home']);
+        }
+      })
       return true;
     }
 
