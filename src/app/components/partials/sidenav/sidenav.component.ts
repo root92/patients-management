@@ -23,13 +23,12 @@ export class SidenavComponent implements OnInit {
 
   }
 
-  // onLogout(){
-    
-  //   this.AuthService.logoutUser();
-  //   this.FlashMessages.show('You are now logged out', {cssClass: 'alert-success', timeout: 3000})
-  //   this.router.navigate(['']);
+  onLogout() {
 
-  // }
+    this.AuthService.logoutUser();
+    this.router.navigate(['']);
+    this.FlashMessages.show('You are now logged out!', {cssClass: 'alert-success', timeout: 3000})
+
+  }
 
 }
-

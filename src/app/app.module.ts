@@ -18,6 +18,7 @@ import 'hammerjs';
 import {FlashMessagesModule} from 'angular2-flash-messages';
 
 import {AuthServiceService} from './services/auth-service.service';
+import {AuthGuard} from './guards/auth.guard';
 
 import { AppComponent } from './app.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
@@ -40,7 +41,7 @@ import { ConsultationComponent } from './components/consultation/consultation.co
 
 const appRoutes: Routes = [
   {path: '', component: LoginComponent},
-  {path: 'home', component: HomeComponent},
+  {path: 'home', component: HomeComponent, canActivate:[AuthGuard]},
   {path: 'patients', component: PatientsComponent,
     children: [
       {path: '', redirectTo: 'patients', pathMatch: 'full' },
@@ -55,7 +56,7 @@ const appRoutes: Routes = [
           breadcrumb: "Patient / list Patients"
         }
       }
-    ]
+    ], canActivate:[AuthGuard]
   },
 
   {path: 'consulation', component: ConsultationComponent,
@@ -71,14 +72,14 @@ const appRoutes: Routes = [
             breadcrumb: "Consultation / Physical Examination"
         }
       },
-    ]
+    ], canActivate:[AuthGuard]
   },
 
-  {path: 'imaging', component: ImagingComponent,},
-  {path: 'medication', component: MedicationComponent},
-  {path: 'labs', component: LabsComponent},
-  {path: 'billings', component: BillingComponent},
-  {path: 'traitementPlan', component: TraitementPlanComponent}
+  {path: 'imaging', component: ImagingComponent, canActivate:[AuthGuard]},
+  {path: 'medication', component: MedicationComponent, canActivate:[AuthGuard]},
+  {path: 'labs', component: LabsComponent, canActivate:[AuthGuard]},
+  {path: 'billings', component: BillingComponent, canActivate:[AuthGuard]},
+  {path: 'traitementPlan', component: TraitementPlanComponent, canActivate:[AuthGuard]}
 ]
 
 @NgModule({
@@ -116,7 +117,7 @@ const appRoutes: Routes = [
     MdIconModule
   ],
 
-  providers: [MdIconRegistry, AuthServiceService],
+  providers: [MdIconRegistry, AuthServiceService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

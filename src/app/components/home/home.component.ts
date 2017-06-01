@@ -27,26 +27,26 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  onLoginSubmit() {
-    const user = {
-      username: this.username,
-      password: this.password
-    }
-
-    if (user.username == undefined || user.password == undefined) {
-      this.FlashMessages.show('Please fill all fields', {cssClass: 'alert-danger', timeout: 3000});
-      return false;
-    } else {
-      this.FlashMessages.show('You are now logged in', {cssClass: 'alert-success', timeout: 3000});
-      console.log(user.username + ' ' + user.password);
-      /* Login User */
-      /* this.AuthService.loginUser(user).subscribe(data => {
-        // TODO
-      }) */
-      this.router.navigate(['/client']);
-      return true;
-    }
-
-  }
+  // onLoginSubmit() {
+  //   const user = {
+  //     username: this.username,
+  //     password: this.password
+  //   }
+  //
+  //   if (user.username == undefined || user.password == undefined) {
+  //     this.FlashMessages.show('Please fill all fields', {cssClass: 'alert-danger', timeout: 3000});
+  //     return false;
+  //   } else {
+  //     this.FlashMessages.show('You are now logged in', {cssClass: 'alert-success', timeout: 3000});
+  //     console.log(user.username + ' ' + user.password);
+  //     /* Login User */
+  //     /* this.AuthService.loginUser(user).subscribe(data => {
+  //       // TODO
+  //     }) */
+  //     this.router.navigate(['/client']);
+  //     return true;
+  //   }
+  //
+  // }
 
 }
