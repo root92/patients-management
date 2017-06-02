@@ -35,10 +35,11 @@ export class LoginComponent implements OnInit {
     } else {;
       /* Login User */
       this.AuthService.loginUser(user).subscribe(data => {
-        if (data.first_name && data.last_name) {
-          this.FlashMessages.show('You are now logged in', {cssClass: 'alert-success', timeout: 3000})
-          this.router.navigate(['/home']);
-        }
+        this.AuthService.StoreToken(data.token);
+        this.FlashMessages.show('You are now logged in', {cssClass: 'alert-success', timeout: 3000})
+        this.router.navigate(['/home']);
+      }, error => {
+        this.FlashMessages.show('Your email or password is wrong!', {cssClass: 'alert-danger', timeout: 3000});
       })
       return true;
     }
