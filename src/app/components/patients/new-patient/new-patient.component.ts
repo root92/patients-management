@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PatientServiceService } from '../../../services/patient-service.service'
+import { Patient } from '../../../models/patient'
 
 @Component({
   selector: 'app-new-patient',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-patient.component.css']
 })
 export class NewPatientComponent implements OnInit {
-  show: boolean = false;
-  constructor() { }
+  // onSearch: boolean = false;
+
+  private patientCollection: Patient[];
+
+  constructor( ) { }
 
   ngOnInit() {
+  }
+
+  onSearch(patientSerivce: PatientServiceService){
+    patientSerivce.getPatientInfo().subscribe(patientCollection => {
+      this.patientCollection = patientCollection;
+    });
+    console.log(this.patientCollection)
   }
 
 

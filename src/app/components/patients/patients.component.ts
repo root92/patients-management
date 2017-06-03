@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MdSidenavModule } from '@angular2-material/sidenav';
 import { SidenavComponent } from '../partials/sidenav/sidenav.component';
 
+
 @Component({
   selector: 'app-patients',
   templateUrl: './patients.component.html',
@@ -10,10 +11,13 @@ import { SidenavComponent } from '../partials/sidenav/sidenav.component';
 })
 export class PatientsComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {
   }
+
+
 
 }
 

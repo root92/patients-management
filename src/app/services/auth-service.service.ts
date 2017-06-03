@@ -13,6 +13,7 @@ export class AuthServiceService {
     headers.append('Content-Type', 'application/json');
     return this.http.post('http://localhost:8000/api/v1/api-token-auth/', user, {headers: headers})
     .map(res => res.json());
+    
   }
 
   StoreToken(token) {
