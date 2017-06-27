@@ -15,7 +15,7 @@ export class AuthServiceService {
     .map(res => res.json());
   }
 
-  StoreToken(token) {
+  storeToken(token) {
     // store token in localStorage to keep user logged in between page refereshes
     localStorage.setItem('id_token', token);
   }
