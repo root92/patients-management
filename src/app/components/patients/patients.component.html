@@ -3,7 +3,7 @@
   <div class="sidenav-content">
     <md-toolbar color="primary">Patients
       <span class="spacer"></span>
-      <button md-button [routerLink]="['newPatient']"><md-icon>add</md-icon>New Patient</button>
+      <button md-button [routerLink]="['newPatient']"><md-icon>+</md-icon>New Patient</button>
           <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
           View History
@@ -14,7 +14,84 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <router-outlet></router-outlet>
-          
+
+          <div style="margin: auto; margin-bottom: 50px;">
+            <data-table id="persons-grid"
+                headerTitle="Patients"
+                [items]="items"
+                (reload)="reloadItems($event)"
+
+                (rowClick)="rowClick($event)"
+                (rowDoubleClick)="rowDoubleClick($event)"
+                [rowTooltip]="rowTooltip"
+                >
+                <data-table-column
+                    [property]="'insuranceNumber'"
+                    [header]="'Insurance Number'"
+                    [sortable]="true"
+                    [resizable]="true">
+                </data-table-column>
+                <data-table-column
+                    [property]="'firstName'"
+                    [header]="'First Name'"
+                    [sortable]="true"
+                    [resizable]="true">
+                </data-table-column>
+                <data-table-column
+                    [property]="'lastName'"
+                    [header]="'Last Name'"
+                    [sortable]="true"
+                    [resizable]="true">
+                </data-table-column>
+                 <data-table-column
+                    [property]="'sex'"
+                    [header]="'Sex'"
+                    [sortable]="true"
+                    [resizable]="true">
+                </data-table-column>
+                <data-table-column
+                    [property]="'birthYear'"
+                    [header]="'Birth Year'">
+                    <template #dataTableCell let-item="item">
+                        <span>{{item.date | date:'yyyy-MM-dd'}}</span>
+                    </template>
+                </data-table-column>
+                <data-table-column
+                    property="phone1"
+                    header="Phone number (1)"
+                    width="150px">
+                </data-table-column>
+                 <data-table-column
+                    property="phone2"
+                    header="Phone number (2)"
+                    width="150px">
+                </data-table-column>
+                <data-table-column
+                    property="email"
+                    header="Email">
+                </data-table-column>
+                <data-table-column
+                    property="bloodType"
+                    header="Blood Type">
+                </data-table-column>
+               
+                <!--data-table-column
+                    [property]="'active'"
+                    [header]="'Active'"
+                    [width]="100"
+                    [resizable]="true">
+                    <template #dataTableHeader let-item="item">
+                        <span style="color: rgb(232, 0, 0)">Active</span>
+                    </template>
+                    <template #dataTableCell let-item="item">
+                        <span style="color: grey">
+                        <span class="glyphicon glyphicon-ok" *ngIf="item.active"></span>
+                        <span class="glyphicon glyphicon-remove" *ngIf="!item.active"></span>
+                        </span>
+                    </template>
+                </data-table-column-->
+            </data-table>
+          </div>
         </div>
       </div>
     </div>      
