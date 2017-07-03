@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
       this.AuthService.loginUser(user).subscribe(data => {
         this.AuthService.storeToken(data.token);
         this.FlashMessages.show('You are now logged in', {cssClass: 'alert-success', timeout: 3000})
+      //  this.FlashMessages.show(data.token, {cssClass: 'alert-success', timeout: 9000})
         this.router.navigate(['/home']);
       }, error => {
         this.FlashMessages.show('Your email or password is wrong!', {cssClass: 'alert-danger', timeout: 3000});

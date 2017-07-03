@@ -12,6 +12,7 @@ import { MdSidenavModule } from '@angular2-material/sidenav';
 import { MdToolbarModule } from '@angular2-material/toolbar';
 import { MdListModule } from '@angular2-material/list';
 import { MdIconRegistry } from '@angular2-material/icon'
+
 import { DataTableModule } from 'angular-2-data-table';
 
 import 'hammerjs';

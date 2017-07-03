@@ -3,16 +3,17 @@
       <div class="input-group input-group-sm">
         <span class="input-group-addon" id="sizing-addon3">Insurance Name</span>
         <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
+        <!--{{items.Name}}-->
       </div>
     </div>
     <div class="col-md-5">
       <div class="input-group input-group-sm">
         <span class="input-group-addon" id="sizing-addon3">Insured ID</span>
-        <input type="text" class="form-control" placeholder="Insured ID" aria-describedby="sizing-addon3" name="insID">
+        <input type="text" class="form-control" placeholder="Insured ID" aria-describedby="sizing-addon3" name="insID" [(ngModel)]="insID">
       </div>
     </div>
     <div class="col-md-2">
-      <button class="btn btn-default" (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
+      <button class="btn btn-default" (click)=this.OnIDChange()>{{show ? 'hide' : 'show'}}</button>
     </div>
 </div>
 
@@ -21,38 +22,49 @@
       <div class="col-xs-12 col-md-6">
         <div class="form-group">
           <label for="">First Name</label>
-          <input type="" class="form-control" id="" placeholder="First Name">
+          <input type="" class="form-control" id="" placeholder="First Name" name="frstName" [(ngModel)]="frstName" value="{{items[0].firstName}}">
         </div>
-        <div class="form-group">
+
+        <!--<div class="form-group">
           <label for="">Middle Name</label>
-          <input type="" class="form-control" id="" placeholder="Middle Name">
-        </div>
+          <input type="" class="form-control" id="" placeholder="Middle Name" name="" [(ngModel)]="">
+        </div>-->
         <div class="form-group">
           <label for="">Last Name</label>
-          <input type="" class="form-control" id="" placeholder="Last Name">
+          <input type="" class="form-control" id="" placeholder="Last Name" name="lstName" [(ngModel)]="lstName" value="{{items[0].lastName}}">
         </div>
-        <div class="input-group input-group-sm" style="padding-top: 10px;">
+        <!--<div class="input-group input-group-sm" style="padding-top: 10px;">
+          <input type="" class="form-control" id="" placeholder="Sexe" name="sexe" [(ngModel)]="sexe">
           <span class="input-group-addon" id="sizing-addon3">Sexe</span>
             <select class="form-control form-control-sm">
               <option>Male</option>
               <option>Female</option>
             </select>
-        </div>
+        </div>-->
         <div class="form-group"style="padding-top: 10px;">
           <label for="">Date Of Birth</label>
-          <input type="" class="form-control" id="" placeholder="Date Of Birth">
+          <input type="" class="form-control" id="" placeholder="Date Of Birth" name="dtOfBrth" [(ngModel)]="dtOfBrth" value="{{items[0].birthYear}}">
         </div>
         <div class="form-group">
           <label for="">Age</label>
-          <input type="" class="form-control" id="" placeholder="Age">
+          <input type="" class="form-control" id="" placeholder="Age" name="age" [(ngModel)]="age">
         </div>
         <div class="form-group">
-          <label for="">Place Of Birth</label>
-          <input type="" class="form-control" id="" placeholder="Place Of Birth">
+          <label for="">Email</label>
+          <input type="" class="form-control" id="" placeholder="Email" name="email" [(ngModel)]="email" value="{{items[0].email}}">
         </div>
+        <div class="form-group">
+          <label for="">Blood Type</label>
+          <input type="" class="form-control" id="" placeholder="Blood Type" name="bloodtyp" [(ngModel)]="bloodtyp" value="{{items[0].bloodType}}">
+        </div>
+
+        <!--<div class="form-group">
+          <label for="">Place Of Birth</label>
+          <input type="" class="form-control" id="" placeholder="Place Of Birth" name="plcOfBrth" [(ngModel)]="plcOfBrth">
+        </div>-->
       </div>
       <div class="col-xs-6 col-md-6">
-        <div class="input-group input-group-sm" style="padding-top: 10px;">
+        <!--<div class="input-group input-group-sm" style="padding-top: 10px;">
           <span class="input-group-addon" id="sizing-addon3">Blood Type</span>
             <select class="form-control form-control-sm">
               <option>A+</option>
@@ -64,7 +76,7 @@
               <option>AB+</option>
               <option>AB-</option>
             </select>
-        </div>
+        </div>-->
 
         <!--<div class="form-group">
           <label for="">Blood Type</label>
@@ -74,17 +86,17 @@
           <label for="">Clinic site</label>
           <input type="" class="form-control" id="" placeholder="Clinic site">
         </div>-->
-        <div class="form-group" style="padding-top: 10px;">
+        <!--<div class="form-group" style="padding-top: 10px;">
           <label for="">Parent/ Guardian</label>
           <input type="" class="form-control" id="" placeholder="Parent/ Guardian">
-        </div>
-        <div class="form-group">
+        </div>-->
+       <div class="form-group">
           <label for="">Phone 1</label>
-          <input type="" class="form-control" id="" placeholder="Phone 1">
+          <input type="" class="form-control" id="" placeholder="Phone 1" name="phone1" [(ngModel)]="phone1" value="{{items[0].phone1}}">
         </div>
         <div class="form-group">
           <label for="">Phone 2</label>
-          <input type="" class="form-control" id="" placeholder="Phone 2">
+          <input type="" class="form-control" id="" placeholder="Phone 2" name="phone2" [(ngModel)]="phone2" value="{{items[0].phone2}}">
         </div>
         <div class="form-group">
           <label for="">Adresse</label>
@@ -94,14 +106,14 @@
           <label for="">Email</label>
           <input type="" class="form-control" id="" placeholder="Email">
         </div>
-        <div class="form-group">
+        <!--<div class="form-group">
           <label for="">Occupation</label>
           <input type="" class="form-control" id="" placeholder="Occupation">
-        </div>
-        <div class="form-group">
+        </div>-->
+        <!--<div class="form-group">
           <label for="">Country</label>
           <input type="" class="form-control" id="" placeholder="Country">
-        </div>
+        </div>-->
       </div>
     </div>
 
